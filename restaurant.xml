@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<restaurant xmlns="http://www.example.org/restaurant"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:SchemaLocation="http://www.example.org/restaurant restaurant1.xsd">
+<!-- <!DOCTYPE restaurant SYSTEM "restaurantDefinition.dtd"> -->
+<!-- <?xml-model href="restaurant1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+
+    <customer id="C1">
+        <name>John Doe</name>
+        <email>johndoe@example.com</email>
+        <phone>555-1234</phone>
+    </customer>
+    <employee id="E1">
+        <name>Jane Smith</name>
+        <position>Chef</position>
+        <phone>555-5678</phone>
+    </employee>
+    <table id="T1" location="Window Side">
+        <seats>4</seats>
+    </table>
+    <menu id="M1" name="Lunch Specials">
+        <menuItem id="MI1" category="Salad">
+            <name>Caesar Salad</name>
+            <price>12.99</price>
+            <description>A classic Caesar salad with fresh romaine lettuce, croutons, and Parmesan cheese.</description>
+        </menuItem>
+        <menuItem id="MI2" category="Main-Course">
+            <name>Grilled Chicken</name>
+            <price>15.99</price>
+            <description>Juicy grilled chicken served with seasonal vegetables.</description>
+        </menuItem>
+    </menu>
+    <reservation id="R1">
+        <customerId>C1</customerId>
+        <tableId>T1</tableId>
+        <reservationTime>2024-08-15T19:00:00</reservationTime>
+    </reservation>
+    <order id="O1">
+        <customerId>C1</customerId>
+        <menuItemId>MI1</menuItemId>
+        <quantity>2</quantity>
+        <totalPrice>25.98</totalPrice>
+    </order>
+    <payment id="P1">
+        <orderId>O1</orderId>
+        <amount>25.98</amount>
+        <paymentMethod>Credit Card</paymentMethod>
+    </payment>
+    <feedback id="F1">
+        <customerId>C1</customerId>
+        <rating>4</rating>
+        <comments>Great food and service!</comments>
+    </feedback>
+</restaurant>

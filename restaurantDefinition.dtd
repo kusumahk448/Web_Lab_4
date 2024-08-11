@@ -1,0 +1,33 @@
+<!ELEMENT restaurant (customer, employee, table, menu, reservation, order, payment, feedback)>
+<!ELEMENT customer (name, email, phone)>
+<!ATTLIST customer id ID #REQUIRED
+                   email CDATA #REQUIRED
+                   phone CDATA #REQUIRED>
+
+<!ELEMENT employee (name, position, phone)>
+<!ATTLIST employee id ID #REQUIRED
+                   phone CDATA #REQUIRED>
+
+<!ELEMENT table (seats)>
+<!ATTLIST table id ID #REQUIRED
+                   location CDATA #REQUIRED>
+
+<!ELEMENT menu (menuItem+)>
+<!ATTLIST menu id ID #REQUIRED
+                   name CDATA #REQUIRED>
+
+<!ELEMENT menuItem (name, price, description)>
+<!ATTLIST menuItem id ID #REQUIRED
+                   category CDATA #REQUIRED>
+
+<!ELEMENT reservation (customerId, tableId, reservationTime)>
+<!ATTLIST reservation id ID #REQUIRED>
+
+<!ELEMENT order (customerId, menuItemId, quantity, totalPrice)>
+<!ATTLIST order id ID #REQUIRED>
+
+<!ELEMENT payment (orderId, amount, paymentMethod)>
+<!ATTLIST payment id ID #REQUIRED>
+
+<!ELEMENT feedback (customerId, rating, comments)>
+<!ATTLIST feedback id ID #REQUIRED>

@@ -5,19 +5,65 @@
 <!-- <!DOCTYPE restaurant SYSTEM "restaurantDefinition.dtd"> -->
 <!-- <?xml-model href="restaurant1.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
 
+    <!-- Customer Entities -->
     <customer id="C1">
         <name>John Doe</name>
         <email>johndoe@example.com</email>
         <phone>555-1234</phone>
     </customer>
+    <customer id="C2">
+        <name>Ava Chen</name>
+        <email>avachen@example.com</email>
+        <phone>345-1234</phone>
+    </customer>
+    <customer id="C3">
+        <name>Michael Brown</name>
+        <email>michaelbrown@example.com</email>
+        <phone>678-2345</phone>
+    </customer>
+    <customer id="C4">
+        <name>Emily Davis</name>
+        <email>emilydavis@example.com</email>
+        <phone>789-4567</phone>
+    </customer>
+
+    <!-- Employee Entities -->
     <employee id="E1">
         <name>Jane Smith</name>
         <position>Chef</position>
         <phone>555-5678</phone>
     </employee>
+    <employee id="E2">
+        <name>Mark Johnson</name>
+        <position>Waiter</position>
+        <phone>555-8765</phone>
+    </employee>
+    <employee id="E3">
+        <name>Lisa Brown</name>
+        <position>Manager</position>
+        <phone>555-4321</phone>
+    </employee>
+    <employee id="E4">
+        <name>Tom Wilson</name>
+        <position>Busboy</position>
+        <phone>555-6789</phone>
+    </employee>
+
+    <!-- Table Entities -->
     <table id="T1" location="Window Side">
         <seats>4</seats>
     </table>
+    <table id="T2" location="Center">
+        <seats>2</seats>
+    </table>
+    <table id="T3" location="Patio">
+        <seats>6</seats>
+    </table>
+    <table id="T4" location="Bar Area">
+        <seats>3</seats>
+    </table>
+
+    <!-- Menu Entities -->
     <menu id="M1" name="Lunch Specials">
         <menuItem id="MI1" category="Salad">
             <name>Caesar Salad</name>
@@ -29,26 +75,107 @@
             <price>15.99</price>
             <description>Juicy grilled chicken served with seasonal vegetables.</description>
         </menuItem>
+        <menuItem id="MI3" category="Dessert">
+            <name>Chocolate Cake</name>
+            <price>6.99</price>
+            <description>Rich chocolate cake with a gooey center and a scoop of vanilla ice cream.</description>
+        </menuItem>
+        <menuItem id="MI4" category="Appetizer">
+            <name>Bruschetta</name>
+            <price>8.99</price>
+            <description>Toasted bread topped with a mix of tomatoes, garlic, and basil.</description>
+        </menuItem>
     </menu>
+
+    <!-- Reservation Entities -->
     <reservation id="R1">
         <customerId>C1</customerId>
         <tableId>T1</tableId>
         <reservationTime>2024-08-15T19:00:00</reservationTime>
     </reservation>
+    <reservation id="R2">
+        <customerId>C2</customerId>
+        <tableId>T2</tableId>
+        <reservationTime>2024-08-16T20:00:00</reservationTime>
+    </reservation>
+    <reservation id="R3">
+        <customerId>C3</customerId>
+        <tableId>T3</tableId>
+        <reservationTime>2024-08-17T18:30:00</reservationTime>
+    </reservation>
+    <reservation id="R4">
+        <customerId>C4</customerId>
+        <tableId>T4</tableId>
+        <reservationTime>2024-08-18T21:00:00</reservationTime>
+    </reservation>
+
+    <!-- Order Entities -->
     <order id="O1">
         <customerId>C1</customerId>
         <menuItemId>MI1</menuItemId>
         <quantity>2</quantity>
         <totalPrice>25.98</totalPrice>
     </order>
+    <order id="O2">
+        <customerId>C2</customerId>
+        <menuItemId>MI2</menuItemId>
+        <quantity>1</quantity>
+        <totalPrice>15.99</totalPrice>
+    </order>
+    <order id="O3">
+        <customerId>C3</customerId>
+        <menuItemId>MI3</menuItemId>
+        <quantity>3</quantity>
+        <totalPrice>20.97</totalPrice>
+    </order>
+    <order id="O4">
+        <customerId>C4</customerId>
+        <menuItemId>MI4</menuItemId>
+        <quantity>1</quantity>
+        <totalPrice>8.99</totalPrice>
+    </order>
+
+    <!-- Payment Entities -->
     <payment id="P1">
         <orderId>O1</orderId>
         <amount>25.98</amount>
         <paymentMethod>Credit Card</paymentMethod>
     </payment>
+    <payment id="P2">
+        <orderId>O2</orderId>
+        <amount>15.99</amount>
+        <paymentMethod>Cash</paymentMethod>
+    </payment>
+    <payment id="P3">
+        <orderId>O3</orderId>
+        <amount>20.97</amount>
+        <paymentMethod>Debit Card</paymentMethod>
+    </payment>
+    <payment id="P4">
+        <orderId>O4</orderId>
+        <amount>8.99</amount>
+        <paymentMethod>Credit Card</paymentMethod>
+    </payment>
+
+    <!-- Feedback Entities -->
     <feedback id="F1">
         <customerId>C1</customerId>
         <rating>4</rating>
         <comments>Great food and service!</comments>
+    </feedback>
+    <feedback id="F2">
+        <customerId>C2</customerId>
+        <rating>5</rating>
+        <comments>Excellent experience, will come again!</comments>
+    </feedback>
+    <feedback id="F3">
+        <customerId>C3</customerId>
+        <rating>3</rating>
+        <comments>Food was okay, but the service could be better.</comments>
+    </feedback>
+    <feedback id="F4">
+        <customerId>C4</customerId>
+        <rating>4</rating>
+        <comments>Nice atmosphere and good food.</comments>
     </feedback>
 </restaurant>
